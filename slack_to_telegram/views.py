@@ -15,7 +15,7 @@ def slack_notification(request, notification_url):
         text = escape_markdown(request.POST['text'])
 
         if user_id != 'USLACKBOT':
-            message = '*{user}* _in_ #{channel}:\n{text}'
+            message = u'*{user}* _in_ #{channel}:\n{text}'
 
             message = message.format(user=user_name, channel=channel_name, text=text)
 
